@@ -1,8 +1,9 @@
 # Use the latest alpine image as the base
-FROM alpine:latest
+FROM python:3.11.9-alpine3.20
+
 
 # Install Python
-RUN apk add --no-cache python3 py3-pip
+# RUN apk add --no-cache python3=3.11.2-r0 py3-pip
 
 # Copy benchmark.py to the container
 COPY benchmark.py /benchmark.py
